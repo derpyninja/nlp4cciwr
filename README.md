@@ -1,7 +1,7 @@
 nlp4cciwr
 ==============================
 
-Natural Language Processing for quantifying cooperation and conflict about international water resources.
+Natural Language Processing for quantifying cooperation and conflict over International Water Resources.
 
 Project Organization
 ------------
