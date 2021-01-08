@@ -1,7 +1,9 @@
+[![Built with spaCy](https://img.shields.io/badge/built%20with-spaCy-09a3d5.svg)](https://spacy.io)
+
 nlp4cciwr
 ==============================
 
-Natural Language Processing for quantifying cooperation and conflict over International Water Resources.
+Natural Language Processing (NLP) for quantifying Cooperation and Conflict over International Water Resources (CCIWR).
 
 Project Organization
 ------------
