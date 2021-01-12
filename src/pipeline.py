@@ -14,7 +14,7 @@ from src.data import make_datasets
 # -----------------------------------------------------------------------------
 
 # version of run
-version = "V5"
+version = "V6"
 
 # corpus name
 fname_corpus = "BBC_2007_07_04_CORPUS_TEXTACY_{}.bin.gz".format(version)

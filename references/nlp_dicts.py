@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from collections import OrderedDict
+
 
 # set: unordered collections of unique elements (no duplicates possible)
 stopwords_bbc_monitoring = {
@@ -56,7 +58,8 @@ stopwords_bbc_monitoring = {
     "gmt",
     "news",
     "tv",
-    "television" "gen",
+    "television",
+    "gen",
     "rig",
     "ha",
     "report",
@@ -153,7 +156,8 @@ stopwords_bbc_monitoring = {
     "write",
     "writes",
     "written",
-    "writing" "village",
+    "writing",
+    "village",
     "town",
     "yesterday",
     "head",
@@ -175,7 +179,8 @@ stopwords_bbc_monitoring = {
     "read",
     "comment",
     "publish",
-    "publishes" "published",
+    "publishes",
+    "published",
     "publishing",
     "want",
     "come",
@@ -195,7 +200,8 @@ stopwords_bbc_monitoring = {
     "word",
     "wording",
     "carry",
-    "carries" "carrying",
+    "carries",
+    "carrying",
     "carried",
     "satellite",
     "think",
@@ -225,6 +231,10 @@ stopwords_bbc_monitoring = {
     "newsfile",
 }
 
-
 if __name__ == "__main__":
-    pass
+    import pandas as pd
+
+    df = pd.DataFrame(stopwords_bbc_monitoring, columns=["stopword"])
+    df = df.sort_values(by="stopword")
+    df.to_csv("stopwords_bbc_monitoring_data.csv", index=False)
+    print(df.shape)
