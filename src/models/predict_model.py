@@ -2,6 +2,7 @@
 import os
 import textacy
 import logging
+from tqdm import tqdm
 
 
 class TopicModelPermutation:
@@ -24,9 +25,9 @@ class TopicModelPermutation:
         logger = logging.getLogger(__name__)
         logger.info("Topic modelling permutation.")
 
-        for model_type in self.model_types:
-            for n_topics in self.n_topics_list:
-                for n_terms in self.n_terms_list:
+        for model_type in tqdm(self.model_types):
+            for n_topics in tqdm(self.n_topics_list):
+                for n_terms in tqdm(self.n_terms_list):
 
                     # init model
                     model = textacy.tm.TopicModel(
