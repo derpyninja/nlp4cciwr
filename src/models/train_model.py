@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 import os
 import pickle
-import textacy
 import logging
+import textacy
+import textacy.vsm
 
 
 def group_vectorizer(

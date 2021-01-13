@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 import os
-import textacy
 import logging
+import textacy
+import textacy.tm
 from tqdm import tqdm
 
 
@@ -26,12 +27,12 @@ class TopicModelPermutation:
         logger.info("Topic modelling permutation.")
 
         for model_type in tqdm(self.model_types):
-            for n_topics in tqdm(self.n_topics_list):
-                for n_terms in tqdm(self.n_terms_list):
+            for n_topics in self.n_topics_list:
+                for n_terms in self.n_terms_list:
 
                     # init model
                     model = textacy.tm.TopicModel(
-                        model=model_type, n_topics=n_topics
+                        model=model_type, n_topics=n_topics, n_jobs=-1
                     )
 
                     # fit model

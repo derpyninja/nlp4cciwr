@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import textacy
+import textacy.vsm
 
 
 def tokenize_corpus(
