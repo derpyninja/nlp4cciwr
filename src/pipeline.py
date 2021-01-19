@@ -110,14 +110,16 @@ else:
 # -----------------------------------------------------------------------------
 # 3) Topic Modelling
 # -----------------------------------------------------------------------------
+compute_topic_models = False
 
-tm_permutation = predict_model.TopicModelPermutation(
-    grp_term_matrix=grp_term_matrix, vectorizer=vectorizer, version=version
-)
+if compute_topic_models:
+    tm_permutation = predict_model.TopicModelPermutation(
+        grp_term_matrix=grp_term_matrix, vectorizer=vectorizer, version=version
+    )
 
-tm_permutation.calc(
-    model_dir=model_dir, figure_dir=figure_dir, save=True, plot=True
-)
+    tm_permutation.calc(
+        model_dir=model_dir, figure_dir=figure_dir, save=True, plot=True
+    )
 
 # -----------------------------------------------------------------------------
 # 4) Visualise

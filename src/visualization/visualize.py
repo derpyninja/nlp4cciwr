@@ -11,10 +11,10 @@ def word_counts(corpus, data_dir=None, figure_dir=None, version=None, n=30):
 
     # calc
     word_counts_wcount = corpus.word_counts(
-        weighting="count", as_strings=True, normalize=None
+        weighting="count", as_strings=True, filter_nums=True, normalize="lemma"
     )
     word_counts_wfreq = corpus.word_counts(
-        weighting="freq", as_strings=True, normalize=None
+        weighting="freq", as_strings=True, filter_nums=True, normalize="lemma"
     )
 
     # df
@@ -85,13 +85,13 @@ def word_document_counts(
 
     # calc
     word_doc_counts_wfreq = corpus.word_doc_counts(
-        weighting="freq", as_strings=True
+        weighting="freq", as_strings=True, normalize="lemma"
     )
     word_doc_counts_wcount = corpus.word_doc_counts(
-        weighting="count", as_strings=True
+        weighting="count", as_strings=True, normalize="lemma"
     )
     word_doc_counts_widf = corpus.word_doc_counts(
-        weighting="idf", as_strings=True
+        weighting="idf", as_strings=True, normalize="lemma"
     )
 
     # df

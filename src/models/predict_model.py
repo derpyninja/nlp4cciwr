@@ -14,7 +14,7 @@ class TopicModelPermutation:
         self.version = version
 
         # sklearn.decomposition.<model>
-        self.model_types = ["nmf", "lsa", "lda"]
+        self.model_types = ["nmf", "lsa"]
 
         # cols = number of topics in the model to be initialized
         self.n_topics_list = [2, 3, 4, 5, 6, 7, 8, 9]
